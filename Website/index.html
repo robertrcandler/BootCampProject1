@@ -9,7 +9,9 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <button id="btn1">
+        click
+    </button>
 
 
 
@@ -19,4 +21,62 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmqDHas64RFD_96u5h8kJ1OFWEFdweH80&callback="
+type="text/javascript">
+
+$("#btn1").on("click", function(event) {
+    event.preventDefault();
+        
+
+        // this is the address at which you'll find the information you're looking for and you put your api key-
+        //- in it. 
+        var queryURL = "https://maps.googleapis.com/maps/api/js?key=AIzaSyAmqDHas64RFD_96u5h8kJ1OFWEFdweH80&callback=event";
+        console.log(queryURL);
+        //these are two arguments needed for ajax to go and retrieve something for you, it needs a place to go-
+        //-and a method of what its doing. getting a single image using the above url. gets one things at a time
+    //    var $cityInfo = $('#CITYDISPLAYID');
+       
+        $.ajax({
+          url: queryURL,
+          method: "GET",
+          // if the get request works, i run a function that logs the data i was aiming for
+          success: function(data) {
+              console.log('success', data);
+            //   $.each(data, function(i, item) {
+            //       var weatherData = JSON.stringify(data.weather);
+            //       // 2 arguments passed above are i which is index, and the actual item
+            //     $cityInfo.append('<div>city ' + data.name + ', weather ' + weatherData + ' </div');
+            //   });
+          }
+        //   .then(function (response) { 
+              
+        
+        //       //this goes into the response you got from the server and pulls specific information-
+        //       //-so that you don't have to comb through hella lines of an object to look at them. storing the image url into a variable
+        //         var weatherData = response.weather;
+            
+        //         //this looks like a place for you to take your response from the server and place it. creating new html element to store this image
+        //         var searchResult = $("<div>");
+            
+        //         //this is going to be the url of the cat image you wanted from the server, and-
+        //         //-underneath it you will see an alt tag for accessibility
+        //         searchResult.attr("src", weatherData);
+            
+        //         //this is a jquery method to take the cat image  you got from the server you reached-
+        //         //-and put it at the top of your area where you are placing these in your doc
+        //         $("#cityDisplay").prepend(searchResult);
+                
+        //       })
+        });
+        // console.log('success!')
+        // // // // this function lays out the details of how you want to handle the response from the server, or when we get the info-
+        // // // // -back from the server, in this case about a particular giphy image, or we get a list of them
+          
+          
+        });
+
+
+
+// API key: AIzaSyAmqDHas64RFD_96u5h8kJ1OFWEFdweH80
+</script>
 </html>
