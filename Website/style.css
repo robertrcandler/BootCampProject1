@@ -3,7 +3,15 @@
 
 
 /* end css for footer -Jason   */
-
+body { 
+  background-image: url("./assets/Shutterstock-a-profile-of-a-mountain-lion-with-a-wooded-background.jpg");
+  background-repeat: no-repeat;
+  /* background-size: 81.2em; */
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 5em;
+}
 
 .input-group-rounded .input-group-field {
   border-radius: 5000px 0 0 5000px;
@@ -15,9 +23,50 @@
   font-size: 0.8rem;
 }
 
-.searchBox {
-    margin-top: 300px;
-    margin-left: 100px;
-    margin-right: 100px;
+/*css for header*/
+.top-bar {
+  background-color: darkslategray;
+  margin: 0px auto;
+  overflow: hidden;
 }
+
+.topbar-responsive-logo {
+  overflow: hidden;
+  font-size: 20px;
+  color: darkorange;
+  padding: 5px 10px;
+
+}
+
+.top-bar-title {
+  overflow: hidden;
+  background-color: #2f4f4f;
+  /* margin-left: 10px; */
+}
+
+.menu-icon {
+  overflow: hidden;
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
+
+.searchBox {
+  overflow: hidden;
+  margin-top: 350px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+/* css for footer */
+.footer-container {
+
+  overflow: hidden;
+  padding-top: 200px;
+  margin: 0px;
+}
+
+
+
+
+/* end css for footer -Jason   */
 
