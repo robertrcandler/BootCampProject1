@@ -4,7 +4,7 @@
 
 /* end css for footer -Jason   */
 
-
+/*css for search bar and header */
 .input-group-rounded .input-group-field {
   border-radius: 5000px 0 0 5000px;
   padding-left: 1rem;
@@ -20,4 +20,18 @@
     margin-left: 100px;
     margin-right: 100px;
 }
+/*end css for search bar and header */
+
+
+body {
+    background-color: #cccccc;
+   }
+
+   
+
+
+
+
+
+
 
