@@ -5,6 +5,12 @@
 
 /* end css for footer -Jason   */
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+/*css for search bar and header */
+=======
+>>>>>>> 839fbd3840adf69d444b67874f74489ae69d6c11
 body { 
   background-image: url("./assets/Shutterstock-a-profile-of-a-mountain-lion-with-a-wooded-background.jpg");
   background-repeat: no-repeat;
@@ -15,10 +21,14 @@ body {
   margin-bottom: 5em;
 }
 
+<<<<<<< HEAD
 =======
 
 /*css for search bar and header */
 >>>>>>> c7240e708d7812654d6e5e06768aa064584855e0
+=======
+>>>>>>> jg_branch
+>>>>>>> 839fbd3840adf69d444b67874f74489ae69d6c11
 .input-group-rounded .input-group-field {
   border-radius: 5000px 0 0 5000px;
   padding-left: 1rem;
@@ -74,7 +84,11 @@ body {
   overflow: hidden;
   padding-top: 200px;
   margin: 0px;
+<<<<<<< HEAD
 >>>>>>> cab5b93ed22463b7b506577c0036a659a2194253
+=======
+>>>>>>> jg_branch
+>>>>>>> 839fbd3840adf69d444b67874f74489ae69d6c11
 }
 /*end css for search bar and header */
 
@@ -112,4 +126,8 @@ body {
 
 /* end css for footer -Jason   */
 
+<<<<<<< HEAD
 >>>>>>> cab5b93ed22463b7b506577c0036a659a2194253
+=======
+>>>>>>> jg_branch
+>>>>>>> 839fbd3840adf69d444b67874f74489ae69d6c11
