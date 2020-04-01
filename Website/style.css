@@ -4,8 +4,21 @@
 
 
 /* end css for footer -Jason   */
+<<<<<<< HEAD
 
 /*css for search bar and header */
+=======
+body { 
+  background-image: url("./assets/Shutterstock-a-profile-of-a-mountain-lion-with-a-wooded-background.jpg");
+  background-repeat: no-repeat;
+  /* background-size: 81.2em; */
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 5em;
+}
+
+>>>>>>> jg_branch
 .input-group-rounded .input-group-field {
   border-radius: 5000px 0 0 5000px;
   padding-left: 1rem;
@@ -16,10 +29,52 @@
   font-size: 0.8rem;
 }
 
+/*css for header*/
+.top-bar {
+  background-color: darkslategray;
+  margin: 0px auto;
+  overflow: hidden;
+}
+
+.topbar-responsive-logo {
+  overflow: hidden;
+  font-size: 20px;
+  color: darkorange;
+  padding: 5px 10px;
+
+}
+
+.top-bar-title {
+  overflow: hidden;
+  background-color: #2f4f4f;
+  /* margin-left: 10px; */
+}
+
+.menu-icon {
+  overflow: hidden;
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
+
 .searchBox {
+<<<<<<< HEAD
     margin-top: 200px;
     margin-left: 100px;
     margin-right: 100px;
+=======
+  overflow: hidden;
+  margin-top: 350px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+/* css for footer */
+.footer-container {
+
+  overflow: hidden;
+  padding-top: 200px;
+  margin: 0px;
+>>>>>>> jg_branch
 }
 /*end css for search bar and header */
 
@@ -36,6 +91,7 @@ body {
 
 
 
+<<<<<<< HEAD
   /* Always set the map height explicitly to define the size of the div
          * element that contains the map. */
          #map {
@@ -50,3 +106,10 @@ body {
           padding: 20px;
           
         }
+=======
+
+
+
+/* end css for footer -Jason   */
+
+>>>>>>> jg_branch
