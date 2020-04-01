@@ -1,7 +1,6 @@
 <!doctype html>
 <html class="no-js" lang="en">
 
-<<<<<<< HEAD
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -11,51 +10,8 @@
   <link rel="stylesheet" href="style.css">
 
 </head>
-=======
-  </head>
+
 <body style="background-image: url(https://images5.alphacoders.com/428/thumb-1920-428267.jpg);">
-
-    <!--Change this to mobile responsive navbar-->
-    <nav class="top-bar topbar-responsive">
-        <div class="top-bar-title">
-          <span data-responsive-toggle="topbar-responsive" data-hide-for="medium">
-            <button class="menu-icon" type="button" data-toggle></button>
-          </span>
-          <a class="topbar-responsive-logo" href="#"><strong>Texas Big Cats Finder</strong></a>
-        </div>
-        <div id="topbar-responsive" class="topbar-responsive-links">
-          <div class="top-bar-right">
-            <ul class="menu simple vertical medium-horizontal">
-              <li><a href="#">Home</a></li>
-              <li><a href="History.html">History</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Works</a></li>
-              <li><a href="#">News</a></li>
-              <li><a href="#">Contact</a></li>
-              <li>
-                <button type="button" class="button hollow topbar-responsive-button">Categories</button>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-
-      <!--Search box goes here-->
-      <main class="searchBox">
-        <div class="input-group input-group-rounded">
-            <input class="input-group-field" type="search">
-            <div class="input-group-button">
-                <a href="Output.html">
-                    <!--How to get this button to work properly?-->
-              <input type="submit" class="button secondary" value="Search">
-            </div>
-          </div>
-          
-        </main>
-      <!--Search box goes here-->
->>>>>>> c7240e708d7812654d6e5e06768aa064584855e0
-
-<body>
 
   <!--Change this to mobile responsive navbar-->
   <nav class="top-bar topbar-responsive">
@@ -69,28 +25,47 @@
       <div class="top-bar-right">
         <ul class="menu simple vertical medium-horizontal">
           <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
+          <li><a href="History.html">History</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Works</a></li>
+          <li><a href="#">News</a></li>
           <li><a href="#">Contact</a></li>
           <li>
-            <!-- <button type="button" class="button hollow topbar-responsive-button">Categories</button> -->
+            <button type="button" class="button hollow topbar-responsive-button">Categories</button>
           </li>
         </ul>
       </div>
     </div>
   </nav>
 
-
-   <!--Search box goes here-->
-   <main class="searchBox">
-    <div class="input-group input-group-rounded">
-      <input class="input-group-field" type="search">
-      <div class="input-group-button">
-        <input type="submit" class="button secondary" value="Search">
+  <!--Search box goes here-->
+  <header class="hero-search-filter">
+    <div class="hero-search-filter-content">
+      <img class="hero-search-filter-logo" src="https://placehold.it/160x80" alt="" />
+      <form class="hero-search-filter-form" action="">
+        <label for="findtext">Find</label>
+        <input id="findtext" class="hero-search-filter-form-find" type="text" />
+        <div class="divider">&nbsp;</div>
+        <label for="findlocate">Near</label>
+        <input id="findlocate" class="hero-search-filter-form-near" type="text" />
+        <button class="button"><i class="fa fa-search"></i></button>
+      </form>
+      <ul class="hero-search-filter-menu menu align-center">
+        <li><a href="#"><i class="fa fa-cutlery" aria-hidden="true"></i> Restaurants</a></li>
+        <li><a href="#"><i class="fa fa-glass" aria-hidden="true"></i> Nightlife</a></li>
+        <li><a href="#"><i class="fa fa-wrench" aria-hidden="true"></i> Home Services</a></li>
+        <li><a href="#"><i class="fa fa-cutlery" aria-hidden="true"></i> Delivery</a></li>
+      </ul>
     </div>
-  </main>
+  </header>
+  
+  
+  <!--Search box goes here-->
+
+
 
   <!--Footer goes here-->
-  <section class="footer-container"> 
+  <section class="footer-container">
     <div class="columns shrink footer text-center">
       <p>Powered by Google Maps© & iNaturalist©</p>
       <ul class="menu align-center">
@@ -100,7 +75,7 @@
       </ul>
     </div>
   </section>
-<!--Footer goes here-->
+  <!--Footer goes here-->
 
 
 

@@ -4,7 +4,6 @@
 
 
 /* end css for footer -Jason   */
-<<<<<<< HEAD
 body { 
   background-image: url("./assets/Shutterstock-a-profile-of-a-mountain-lion-with-a-wooded-background.jpg");
   background-repeat: no-repeat;
@@ -15,10 +14,6 @@ body {
   margin-bottom: 5em;
 }
 
-=======
-
-/*css for search bar and header */
->>>>>>> c7240e708d7812654d6e5e06768aa064584855e0
 .input-group-rounded .input-group-field {
   border-radius: 5000px 0 0 5000px;
   padding-left: 1rem;
@@ -57,11 +52,6 @@ body {
 }
 
 .searchBox {
-<<<<<<< HEAD
-    margin-top: 200px;
-    margin-left: 100px;
-    margin-right: 100px;
-=======
   overflow: hidden;
   margin-top: 350px;
   margin-left: 50px;
@@ -74,7 +64,6 @@ body {
   overflow: hidden;
   padding-top: 200px;
   margin: 0px;
->>>>>>> cab5b93ed22463b7b506577c0036a659a2194253
 }
 /*end css for search bar and header */
 
@@ -91,7 +80,6 @@ body {
 
 
 
-<<<<<<< HEAD
   /* Always set the map height explicitly to define the size of the div
          * element that contains the map. */
          #map {
@@ -106,10 +94,120 @@ body {
           padding: 20px;
           
         }
-=======
 
 
+.hero-search-filter {
+  background: url("https://images.pexels.com/photos/115095/pexels-photo-115095.jpeg?w=940&h=650&auto=compress&cs=tinysrgb") center center no-repeat;
+  height: 300px;
+  background-size: cover;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
 
-/* end css for footer -Jason   */
+.hero-search-filter-logo {
+  margin-bottom: 2rem;
+}
 
->>>>>>> cab5b93ed22463b7b506577c0036a659a2194253
+.hero-search-filter-content {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 300px;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.hero-search-filter-menu {
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+
+@media screen and (max-width: 39.9375em) {
+  .hero-search-filter-menu li {
+    -webkit-flex-basis: 50%;
+        -ms-flex-preferred-size: 50%;
+            flex-basis: 50%;
+  }
+  .hero-search-filter-menu li a {
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.hero-search-filter-menu a {
+  color: #fefefe;
+  font-weight: bold;
+}
+
+.hero-search-filter-menu a .fa {
+  font-size: 1.125rem;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+.hero-search-filter-menu a:hover {
+  text-decoration: underline;
+}
+
+.hero-search-filter-form {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 90%;
+  background: #fefefe;
+  padding: 0.25rem;
+  border-radius: 5px;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero-search-filter-form .divider {
+  background-color: #cacaca;
+  width: 1px;
+}
+
+.hero-search-filter-form label {
+  margin-right: 0.75rem;
+  margin-left: 0.75rem;
+  color: #8a8a8a;
+  font-weight: bold;
+}
+
+.hero-search-filter-form input,
+.hero-search-filter-form .button {
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 39.9375em) {
+  .hero-search-filter-form {
+    width: 95%;
+  }
+}
+
+.hero-search-filter-form-find,
+.hero-search-filter-form-near {
+  border: 0;
+  box-shadow: none;
+}
+
+.hero-search-filter-form-find:focus,
+.hero-search-filter-form-near:focus {
+  border: 0;
+  box-shadow: none;
+}
+
