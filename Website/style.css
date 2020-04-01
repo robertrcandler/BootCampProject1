@@ -3,6 +3,7 @@
 
 
 /* end css for footer -Jason   */
+<<<<<<< HEAD
 body { 
   background-image: url("./assets/Shutterstock-a-profile-of-a-mountain-lion-with-a-wooded-background.jpg");
   background-repeat: no-repeat;
@@ -13,6 +14,10 @@ body {
   margin-bottom: 5em;
 }
 
+=======
+
+/*css for search bar and header */
+>>>>>>> c7240e708d7812654d6e5e06768aa064584855e0
 .input-group-rounded .input-group-field {
   border-radius: 5000px 0 0 5000px;
   padding-left: 1rem;
@@ -64,6 +69,20 @@ body {
   padding-top: 200px;
   margin: 0px;
 }
+/*end css for search bar and header */
+
+
+body {
+    background-color: #cccccc;
+   }
+
+   
+
+
+
+
+
+
 
 
 
