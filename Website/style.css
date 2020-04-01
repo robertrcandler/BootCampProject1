@@ -1,9 +1,6 @@
-/* css for footer */
 
-
-
-/* end css for footer -Jason   */
 body { 
+  height: 100%;
   background-image: url("./assets/mountain-lion-with-a-wooded-background.jpg");
   background-repeat: no-repeat;
   /* background-size: 81.2em; */
@@ -23,44 +20,27 @@ body {
   font-size: 0.8rem;
 }
 
-/* #home {
-  padding: 0px;
-  margin: 0px;
-}
-
-#about {
-  margin-left: 0px;
-  padding-left: 0px;
-} */
 
 /*css for header*/
-#topbar-responsive .topbar-responsive-links {
-  background-color: yellow;
-}
 
-#home {
-  background-color: darkslategray;
-}
-
-#about {
-  background-color:darkslategray;
-}
-
-#contact {
-  background-color:darkslategray;
+.dropdown-content {
+  font-family: 'PT Serif', serif;
 }
 
 .top-bar {
   background-color: darkslategray;
   margin: 0px auto;
   overflow: hidden;
+  opacity: 75%;
+  border-bottom: 10px ridge;
 }
 
 .topbar-responsive-logo {
   overflow: hidden;
-  font-size: 20px;
+  font-size: 25px;
   color: darkorange;
   padding: 5px 10px;
+  font-family: 'PT Serif', serif;
 
 }
 
@@ -81,6 +61,7 @@ body {
   margin-top: 350px;
   margin-left: 50px;
   margin-right: 50px;
+  opacity: 65%;
 }
 
 /* css for footer */
@@ -90,9 +71,4 @@ body {
   padding-top: 200px;
   margin: 0px;
 }
-
-
-
-
-/* end css for footer -Jason   */
 
