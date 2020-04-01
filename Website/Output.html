@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Texas Big Cat Finder</title>
     <link rel="stylesheet" href="assets/app.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Output.css">
 
   </head>
-<body style="background-image: url(https://images5.alphacoders.com/428/thumb-1920-428267.jpg);">
+<body>
 
     <!--Change this to mobile responsive navbar-->
     <nav class="top-bar topbar-responsive">
@@ -22,12 +22,9 @@
         <div id="topbar-responsive" class="topbar-responsive-links">
           <div class="top-bar-right">
             <ul class="menu simple vertical medium-horizontal">
-              <li><a href="#">Home</a></li>
-              <li><a href="History.html">History</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Works</a></li>
-              <li><a href="#">News</a></li>
-              <li><a href="#">Contact</a></li>
+              <li><a href="main.html">Home</a></li>
+              <li><a href="History.html"> Search History</a></li>
+
               <li>
                 <button type="button" class="button hollow topbar-responsive-button">Categories</button>
               </li>
@@ -36,19 +33,29 @@
         </div>
       </nav>
 
-      <!--Search box goes here-->
-      <main class="searchBox">
-        <div class="input-group input-group-rounded">
-            <input class="input-group-field" type="search">
-            <div class="input-group-button">
-                <a href="Output.html">
-                    <!--How to get this button to work properly?-->
-              <input type="submit" class="button secondary" value="Search">
-            </div>
-          </div>
+      <!--Output container goes here-->
+      <main class="output">
+      <div class="work-feature-block row">
+        <div class="columns medium-7">
+          <img class="work-feature-block-image" alt="Placeholder image" src="https://geology.com/world/united-states-map-with-state-names.gif"/>
+        </div>
+        <div id="detailsContainer" class="columns medium-5">
+          <h2 class="work-feature-block-header">Description title goes here. Map goes above. </h2>
+          <p class="shortDesc ">This is all placeholder text that can be deleted once we assign output to these elements.</p>
+          <h2 class="listHeader">Details</h2>
+          <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+          </ul>
+        </div>
+      </div>
+      </main>
+      
           
-        </main>
-      <!--Search box goes here-->
+        
+      <!--Output container goes here-->
 
       
       <!--Footer goes here-->
@@ -81,8 +88,3 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
-
-
-
-
-  
