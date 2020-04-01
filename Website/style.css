@@ -4,7 +4,7 @@
 
 /* end css for footer -Jason   */
 body { 
-  background-image: url("./assets/Shutterstock-a-profile-of-a-mountain-lion-with-a-wooded-background.jpg");
+  background-image: url("./assets/mountain-lion-with-a-wooded-background.jpg");
   background-repeat: no-repeat;
   /* background-size: 81.2em; */
   background-position: center center;
@@ -23,7 +23,33 @@ body {
   font-size: 0.8rem;
 }
 
+/* #home {
+  padding: 0px;
+  margin: 0px;
+}
+
+#about {
+  margin-left: 0px;
+  padding-left: 0px;
+} */
+
 /*css for header*/
+#topbar-responsive .topbar-responsive-links {
+  background-color: yellow;
+}
+
+#home {
+  background-color: darkslategray;
+}
+
+#about {
+  background-color:darkslategray;
+}
+
+#contact {
+  background-color:darkslategray;
+}
+
 .top-bar {
   background-color: darkslategray;
   margin: 0px auto;
