@@ -67,11 +67,10 @@
               
             </main>
           <!--Search box goes here-->
-    
           
-          <div id="map" ></div>
+              <div id="map"></div>
 
-
+          <iframe  width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/view?key=AIzaSyAAIl0HJ72nad-p73bmpSeso6VFDkhgXbY&zoom=5&center=31.9686%2C-99.9018" allowfullscreen></iframe>
 
           <!--Footer goes here-->
           <div class="columns shrink footer text-center">
@@ -86,7 +85,7 @@
           <!--Footer goes here-->
     
     
-          <script>
+          <!-- <script>
             var map;
                   function initMap() {
                     map = new google.maps.Map(document.getElementById('map'), {
@@ -95,10 +94,128 @@
                       
                     });console.log('success')
                   }
-            </script>
 
-          <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmqDHas64RFD_96u5h8kJ1OFWEFdweH80&callback=initMap"
-></script>
+                  
+            </script> -->
+  <script>
+    function iNatAPI() {
+      //put way to call submit button location or what ever
+      //make function to create lattitude/longitude box out of location name
+      //link species name from html to species id here
+      //required variables
+      var request;
+      var examplequeryURL = 'https://api.inaturalist.org/v1/observations?taxon_name=bear&captive=false&verifiable=true&lat=29.4704&lng=-103.9578&radius=5&order=desc&order_by=created_at';
+      var siteurl = 'https://api.inaturalist.org/v1/observations?';
+      var mappable = 'mappable=true'; //can put on map, keep true
+      var order = '&order=desc&order_by=created_at'; //order that results are listed
+      var queryURL = siteurl + mappable + order;
+      
+
+      
+      //range calculator
+      function iNatRange() {
+          //one place, don't know what radius of zone is? but fairly decent sized
+          var lat = '&lat=29.211183'; //lattitude
+          var lng = '&lng=-103.236002'; //longitude
+          //sample box
+          var boxarea = '&nelat=29.3&nelng=-103.2&place_id=any&swlat=29.24&swlng=-103.4';
+          //all of texas
+          var texas = '&place_id=18';
+          //location search
+          var coord = "";//using box area as example, create box creater using google api
+          switch (coord) {
+              case boxarea:
+                  queryURL=queryURL+boxarea;
+                  break;
+              case "":
+                  queryURL=queryURL+texas;
+                  break;
+          }
+      }
+      iNatRange();
+      //cat search adder
+      function iNatCat() {
+          //there are no recorded panther/jaguar sightings in texas
+          var mammal = '&iconic_taxon_name=mammalia'; //this works, searches all mammals
+          var mountainLion = '&taxon_id=42006'; //includes, puma, couger, mountain lion
+          //there are no recorded panther/jaguar sightings in texas
+          var ocelot = '&taxon_id=41997';//includes margay
+          var Jaguarundi = '&taxon_id=197783';
+          var bobcat = '&taxon_id=41976';
+          var kitty = '&taxon_id=118552';//domestic cat
+          var bear = '&taxon_id=41638';//american black bear
+          var coyote = '&taxon_id=42051';
+          //search or button functionality
+          var searchAnimal = "Mountain Lion";//using ocelot as example/link to doc later
+          switch (searchAnimal) {
+              case ""://all cats
+                  queryURL = queryURL + mountainLion + ocelot + Jaguarundi + bobcat + kitty;
+                  break;
+              case "Ocelot":
+              case "Margay":
+                  queryURL = queryURL + ocelot;
+                  break;
+              case "Mountain Lion":
+              case "Puma":
+              case "Couger":
+                  queryURL = queryURL + mountainLion;
+                  break;
+              case "Jaguarundi":
+                  queryURL = queryURL + Jaguarundi;
+                  break;
+              case "Bobcat":
+                  queryURL = queryURL +bobcat;
+                  break;
+              case "Cat":
+                  queryURL = queryURL + kitty;
+                  break;
+              default:
+                  alert("Something went wrong!");
+          }
+      }
+      iNatCat();
+      
+      console.log(queryURL);
+      
+      request = new XMLHttpRequest();
+
+      request.open('GET', queryURL, true);
+      request.onload = function () {
+          var $map = $('#map')
+          var data = JSON.parse(this.response);
+          console.log(data);
+          $.each(data, function(i, item) {
+                  var catData = (data.results[1].photos[0].url);
+                  console.log(catData);
+                  // 2 arguments passed above are i which is index, and the actual item
+                $map.append(catData);
+                console.log('y')
+              });
+          if (request.status >= 200 && request.status < 400) {
+              console.log(data);
+          }
+           else {
+              console.log("something went wrong");
+          }
+      }
+
+      request.send();
+  }
+
+  iNatAPI();
+
+  //End Robert's JS
+
+  //Here I am working on pulling an object (photo) from the API arrays - Jason
+
+  function getInfo() {
+    fetch(apiURL)
+    .then(resp => resp.jas)
+  }
+    
+  </script>
+          <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmqDHas64RFD_96u5h8kJ1OFWEFdweH80&callback=initMap"
+></script> -->
           <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
           <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
           <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
@@ -106,56 +223,56 @@
 
 <script>
 
-$("#daSearchbutton").on("click", function(event) {
-    event.preventDefault();
+// $("#daSearchbutton").on("click", function(event) {
+//     event.preventDefault();
         
 
-        // this is the address at which you'll find the information you're looking for and you put your api key-
-        //- in it. 
-        var queryURL = "https://maps.googleapis.com/maps/api/js?key=AIzaSyAmqDHas64RFD_96u5h8kJ1OFWEFdweH80&callback=initMap";
-        console.log(queryURL);
-        //these are two arguments needed for ajax to go and retrieve something for you, it needs a place to go-
-        //-and a method of what its doing. getting a single image using the above url. gets one things at a time
-    //    var $cityInfo = $('#CITYDISPLAYID');
+//         // this is the address at which you'll find the information you're looking for and you put your api key-
+//         //- in it. 
+//         var queryURL = "https://maps.googleapis.com/maps/api/js?key=AIzaSyAmqDHas64RFD_96u5h8kJ1OFWEFdweH80&callback=initMap";
+//         console.log(queryURL);
+//         //these are two arguments needed for ajax to go and retrieve something for you, it needs a place to go-
+//         //-and a method of what its doing. getting a single image using the above url. gets one things at a time
+//     //    var $cityInfo = $('#CITYDISPLAYID');
        
-        $.ajax({
-          url: queryURL,
-          method: "GET",
-          // if the get request works, i run a function that logs the data i was aiming for
-          success: function(data) {
-              console.log('success', data);
-              $.each(data, function(i, item) {
-                  var GEODATA = JSON.stringify(data.ADDDATAHERE);
-                  // 2 arguments passed above are i which is index, and the actual item
-                $searchHistory.append('<div>city ' + data.name + ', ADDDATAHERE ' + ADDDATAHERE + ' </div');
-              });
-          }
-          // .then(function (response) { 
+//         $.ajax({
+//           url: queryURL,
+//           method: "GET",
+//           // if the get request works, i run a function that logs the data i was aiming for
+//           success: function(data) {
+//               console.log('success', data);
+//               $.each(data, function(i, item) {
+//                   var GEODATA = JSON.stringify(data.ADDDATAHERE);
+//                   // 2 arguments passed above are i which is index, and the actual item
+//                 $searchHistory.append('<div>city ' + data.name + ', ADDDATAHERE ' + ADDDATAHERE + ' </div');
+//               });
+//           }
+//           // .then(function (response) { 
               
         
-          //     //this goes into the response you got from the server and pulls specific information-
-          //     //-so that you don't have to comb through hella lines of an object to look at them. storing the image url into a variable
-          //       var CATDATA = response.image;
+//           //     //this goes into the response you got from the server and pulls specific information-
+//           //     //-so that you don't have to comb through hella lines of an object to look at them. storing the image url into a variable
+//           //       var CATDATA = response.image;
             
-          //       //this looks like a place for you to take your response from the server and place it. creating new html element to store this image
-          //       var searchResult = $("<div>");
+//           //       //this looks like a place for you to take your response from the server and place it. creating new html element to store this image
+//           //       var searchResult = $("<div>");
             
-          //       //this is going to be the url of the cat image you wanted from the server, and-
-          //       //-underneath it you will see an alt tag for accessibility
-          //       searchResult.attr("src", CATDATA);
+//           //       //this is going to be the url of the cat image you wanted from the server, and-
+//           //       //-underneath it you will see an alt tag for accessibility
+//           //       searchResult.attr("src", CATDATA);
             
-          //       //this is a jquery method to take the cat image  you got from the server you reached-
-          //       //-and put it at the top of your area where you are placing these in your doc
-          //       $("#catDisplay").prepend(searchResult);
+//           //       //this is a jquery method to take the cat image  you got from the server you reached-
+//           //       //-and put it at the top of your area where you are placing these in your doc
+//           //       $("#catDisplay").prepend(searchResult);
                 
-          //     })
-        });
-        // console.log('success!')
-        // // // // this function lays out the details of how you want to handle the response from the server, or when we get the info-
-        // // // // -back from the server, in this case about a particular inaturalist image, or we get a list of them
+//           //     })
+//         });
+//         // console.log('success!')
+//         // // // // this function lays out the details of how you want to handle the response from the server, or when we get the info-
+//         // // // // -back from the server, in this case about a particular inaturalist image, or we get a list of them
           
           
-        });
+//         });
 
 
 
