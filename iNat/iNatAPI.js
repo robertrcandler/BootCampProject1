@@ -1,6 +1,6 @@
 //iNaturalist Callback url:
 //https://robertrcandler.github.io/BootCampProject1/
-
+var array1;
 //iNaturalist Application id:
 //7a79bd6c05c212de5ceb30a169c542786e4bc33fba28ed1806d16dbd2c41302a
 
@@ -19,7 +19,8 @@ var importjava = document.createElement('script');
 importjava.src = 'catchoice.js';
 document.head.appendChild(importjava);
 
-        
+iNatAPI();
+var mapURL = "https://www.google.com/maps/embed/v1/place?key=AIzaSyAAIl0HJ72nad-p73bmpSeso6VFDkhgXbY";
         
         function iNatAPI() {
             //put way to call submit button location or what ever
@@ -69,16 +70,31 @@ document.head.appendChild(importjava);
                 var bear = '&taxon_id=41638';//american black bear
                 var coyote = '&taxon_id=42051';
                 //search or button functionality
-                var searchAnimal = 'ocelot';//using ocelot as example/link to doc later
+                var searchAnimal = "Mountain Lion";//using ocelot as example/link to doc later
                 switch (searchAnimal) {
                     case ""://all cats
-                        queryURL = queryURL + mountainLion + ocelot + Jaguarundi + bobcat + kitty + bear + coyote;
+                        queryURL = queryURL + mountainLion + ocelot + Jaguarundi + bobcat + kitty;
                         break;
-                    case "ocelot":
+                    case "Ocelot":
+                    case "Margay":
                         queryURL = queryURL + ocelot;
                         break;
-                    case "2 cats":
-                        queryURL = queryURL + ocelot + mountainLion;
+                    case "Mountain Lion":
+                    case "Puma":
+                    case "Couger":
+                        queryURL = queryURL + mountainLion;
+                        break;
+                    case "Jaguarundi":
+                        queryURL = queryURL + Jaguarundi;
+                        break;
+                    case "Bobcat":
+                        queryURL = queryURL +bobcat;
+                        break;
+                    case "Cat":
+                        queryURL = queryURL + kitty;
+                        break;
+                    default:
+                        alert("Something went wrong!");
                 }
             }
             iNatCat();
@@ -93,13 +109,38 @@ document.head.appendChild(importjava);
                 var data = JSON.parse(this.response);
                 if (request.status >= 200 && request.status < 400) {
                     console.log(data);
+                    array1 = JSON.stringify(data.results[0].place_guess);
+                    
+                    //add to image
+                    for (var I=0; i < 20; i++) {
+                        var prelocation = JSON.stringify(data.results[i].place_guess);
+                        var location = prelocation.replace(" ","+");
+                        mapsURL += "&q=" + location;
+                    }
+                    top.document.getElementById('maps').setAttribute("src",mapsURL);
+                    //end add image
+
                 } else {
                     console.log("something went wrong");
-                }
+                }console.log(array1);
+                
             }
-    
+            
             request.send();
         }
    
+        
+        
+        console.log(array1);
 
-        iNatAPI();
+
+
+
+// //outside
+// var mapURL = "https://www.google.com/maps/embed/v1/place?key=AIzaSyAAIl0HJ72nad-p73bmpSeso6VFDkhgXbY";
+// //inside
+// for (var I=0; i < data.results.length; i++) {
+// var location = JSON.stringify(data.results[i].place_guess);
+// mapsURL += "&q=" + location;
+// }
+// top.document.getElementById('maps').setAttribute("src",mapsURL);
