@@ -179,8 +179,11 @@ request.onload = function () {
       $.each(data, function(i, item) {
           var catData = JSON.stringify(data.results[0].place_guess);
           var catData2 = JSON.stringify(data.results[0].quality_grade);
+          var catData3 = JSON.stringify(data.results[3].comments[1].body);
           console.log(catData);
           console.log(catData2);
+          console.log(catData3);
+
           // 2 arguments passed above are i which is index, and the actual item
         $map.append('<div>city ' + data.photo + ' </div>');
         console.log("y");
