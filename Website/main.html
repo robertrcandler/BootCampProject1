@@ -215,6 +215,18 @@ fetch(apiURL)
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmqDHas64RFD_96u5h8kJ1OFWEFdweH80&callback=initMap"
 ></script>
 
+<!--Jorge's local storage function-->
+<script>
+function store1() {
+  document.getElementById('daSearchbutton').onclick = function() {
+  var input = document.getElementById('form1').value;
+  console.log(input);
+  localStorage.getItem(input);
+  localStorage.setItem("userinput", input);
+  };
+  }
+  store1()</script>
+
 
   <!-- DOUBLE CHECK THE CDNs BELOW IF YOU RUN INTO ISSUES, THESE WERE TAILORED FOR A SPECIFIC HW ASSIGNMENT OF MINE - GEORGE -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
