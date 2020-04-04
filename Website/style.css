@@ -8,6 +8,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   margin-bottom: 5em;
+  overflow-x: hidden;
 }
 
 .input-group-rounded .input-group-field {
@@ -56,19 +57,268 @@ body {
   margin-bottom: 5px;
 }
 
-.searchBox {
+/* .searchBox {
   overflow: hidden;
-  margin-top: 350px;
+  margin-top: 150px;
   margin-left: 50px;
   margin-right: 50px;
   opacity: 65%;
+} */
+
+/* Jasons css for search bar  */
+.hero-search-filter {
+  background: url("https://images.pexels.com/photos/115095/pexels-photo-115095.jpeg?w=940&h=650&auto=compress&cs=tinysrgb") center center no-repeat;
+  height: 300px;
+  background-size: cover;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero-search-filter-logo {
+  margin-bottom: 2rem;
+}
+
+.hero-search-filter-content {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 300px;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.hero-search-filter-menu {
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+
+@media screen and (max-width: 39.9375em) {
+  .hero-search-filter-menu li {
+    color: darkorange;
+    -webkit-flex-basis: 50%;
+        -ms-flex-preferred-size: 50%;
+            flex-basis: 50%;
+  }
+  .hero-search-filter-menu li a {
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.hero-search-filter-menu a {
+  color: #fefefe;
+  font-weight: bold;
+}
+
+.hero-search-filter-menu a .fa {
+  font-size: 1.125rem;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+.hero-search-filter-menu a:hover {
+  text-decoration: underline;
+  font-family: 'PT Serif', serif;
+  color: darkorange;
+}
+
+.hero-search-filter-form {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 90%;
+  background: #fefefe;
+  padding: 0.25rem;
+  border-radius: 5px;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero-search-filter-form .divider {
+  background-color: #cacaca;
+  width: 1px;
+}
+
+.hero-search-filter-form label {
+  margin-right: 0.75rem;
+  margin-left: 0.75rem;
+  color: #8a8a8a;
+  font-weight: bold;
+}
+
+.hero-search-filter-form input,
+.hero-search-filter-form .button {
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 39.9375em) {
+  .hero-search-filter-form {
+    width: 95%;
+  }
+}
+
+.hero-search-filter-form-find,
+.hero-search-filter-form-near {
+  border: 0;
+  box-shadow: none;
+}
+
+.hero-search-filter-form-find:focus,
+.hero-search-filter-form-near:focus {
+  border: 0;
+  box-shadow: none;
 }
 
 /* css for footer */
 .footer-container {
-
+  position: relative;
+  float: left;
+  background-color: darkslategray;
   overflow: hidden;
-  padding-top: 200px;
-  margin: 0px;
+  padding-top: 2%;
+  padding-left: 37.1%;
+  padding-right: 37%;
+  margin-top: 45%;
+  opacity: 75%;
+  overflow-x: hidden;
 }
 
+#sitings {
+  color: darkorange;
+}
+
+.travel-feature-card-header {
+  margin-top: 30px;
+  background-color: #56524b;
+  padding: 10px 15px 5px 45px;
+  position: relative;
+  margin-top: 15px;
+  }
+  .travel-feature-card-header.icon:after {
+  font: normal normal normal 14px/1 FontAwesome;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  color: #fefefe;
+  }
+  .travel-feature-card-header.hotel-icon:after {
+  content: "\f236";
+  }
+  .travel-feature-card-header.car-icon:after {
+  content: "\f1b9";
+  }
+  .travel-feature-card-header .travel-feature-card-subtitle {
+  float: left;
+  font-weight: 800;
+  letter-spacing: 1px;
+  font-size: 1em;
+  text-transform: uppercase;
+  color: #fff;
+  }
+  .travel-feature-card-header-controls a {
+  color: #fefefe;
+  }
+  .travel-feature-card-header-controls i {
+  height: 20px;
+  width: 20px;
+  margin-left: 10px;
+  }
+  .travel-feature-card-image {
+  margin-top: 5px;
+  }
+  .travel-feature-card-details {
+  background: #f0f0f0;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 20px;
+  color: #8a8a8a;
+  }
+  .travel-feature-card-details button.added-button {
+  color: #505050;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  font-size: 0.8em;
+  }
+  .travel-feature-card-details button.added-button img {
+  margin-right: 5px;
+  }
+  .travel-feature-card-details button.added-button:hover {
+  color: #505050;
+  border: 1px solid #747474;
+  }
+  .travel-feature-card-details button.add-button {
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  font-size: 0.8em;
+  }
+  @media screen and (max-width: 39.9375em) {
+  .travel-feature-card-content {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #cacaca;
+  }
+  }
+  .travel-feature-card-price {
+  text-align: right;
+  }
+  @media screen and (max-width: 39.9375em) {
+  .travel-feature-card-price {
+  padding-top: 15px;
+  }
+  .travel-feature-card-price .price-subtext {
+  margin-bottom: 0px;
+  }
+  }
+  .travel-feature-card-price h6 {
+  font-weight: 600;
+  font-size: 1.3em;
+  color: #0a0a0a;
+  padding: 0;
+  margin: 0;
+  }
+  .travel-feature-card-title {
+  font-weight: 500;
+  font-size: 1.25em;
+  color: #0a0a0a;
+  }
+  .travel-feature-card-date-range {
+  font-size: 0.9em;
+  font-weight: 700;
+  color: #0a0a0a;
+  }
+  .travel-feature-card-header-controls {
+  float: right;
+  }
+  .travel-feature-card-header-controls i {
+  height: 20px;
+  width: 20px;
+  margin-left: 10px;
+  }
+  main {
+  margin: 10px;
+  border-radius: 4px;
+  border-width: 2px;
+  border-color: black;
+  }
