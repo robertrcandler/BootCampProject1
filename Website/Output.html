@@ -51,17 +51,17 @@
       
         <div class="travel-feature-card-details">
           
-          <h5 class="title">Cat Sighting</h5>
-          <h6 class="travel-feature-card-date-range">Date/Time</h6>
+          <h5 class="title">Mountain Lion Sighting</h5>
+          <h6  id="generalLocation" class="travel-feature-card-date-range"></h6>
           
           <div class="row">
             <div class="small-12 medium-9 columns travel-feature-card-content">
               <div class="row">
                 <div class="small-4 medium-2 columns">
-                  <img  id="photos" class="travel-feature-card-image" src="" alt="Pic here">
+                  <img  id="photos" class="travel-feature-card-image" src="https://static.inaturalist.org/photos/63041075/square.jpeg?1583700137" alt="Pic here">
                 </div>
                 <div class="small-8 medium-10 columns">
-                  <h6 class="travel-feature-card-title">Recent Sighting</h6>
+                  <h6 class="travel-feature-card-title">Sighting Info</h6>
                   <ul>
                     <li id="species_guess" >Species</li>
                     <li id="description">Description</li>
@@ -72,13 +72,100 @@
               </div> 
             </div>
       
-            <div class="small-12 medium-3 columns travel-feature-card-price">
-              <h6>$2,000.00/mo</h6>
-              <p class="travel-feature-card-price-subtext">Big cat finder subscription</p>
-            </div>
+            
           </div> 
         </div>
       </div>
+
+      <!--Second Card Start Here-->
+
+      <div class="travel-feature-card">
+        <div class="travel-feature-card-header{{#if type}} icon {{type}}-icon{{/if}}">
+          <div class="row">
+             <div class="medium-12 columns">
+               <h5 class="travel-feature-card-subtitle"></h5>
+                <div class="travel-feature-card-header-controls">
+                  <span><a href="#"><i class="fa fa-edit"></i></a></span>
+                  <span><a href="#"><i class="fa fa-remove"></i></a></span>
+               </div>
+            </div>
+          </div>  
+        </div>
+      
+      
+        <div class="travel-feature-card-details">
+          
+          <h5 class="title">Mountain Lion Sighting</h5>
+          <h6  id="generalLocation2" class="travel-feature-card-date-range"></h6>
+          
+          <div class="row">
+            <div class="small-12 medium-9 columns travel-feature-card-content">
+              <div class="row">
+                <div class="small-4 medium-2 columns">
+                  <img  id="photos2" class="travel-feature-card-image" src="https://static.inaturalist.org/photos/5828057/square.jpg?1481924323 alt="Pic here">
+                </div>
+                <div class="small-8 medium-10 columns">
+                  <h6 class="travel-feature-card-title">Sighting Info</h6>
+                  <ul>
+                    <li id="species_guess2" >Species</li>
+                    <li id="description2">Description</li>
+                    <li id="time_observed_at2">Time</li>
+                    <li id="observed_on_details2">Date</li>
+                    <li id="comments2">Comments</li>
+                  </ul>                </div>
+              </div> 
+            </div>
+      
+            
+          </div> 
+        </div>
+      </div>
+
+      <!--Third card begins here-->
+
+      <div class="travel-feature-card">
+        <div class="travel-feature-card-header{{#if type}} icon {{type}}-icon{{/if}}">
+          <div class="row">
+             <div class="medium-12 columns">
+               <h5 class="travel-feature-card-subtitle"></h5>
+                <div class="travel-feature-card-header-controls">
+                  <span><a href="#"><i class="fa fa-edit"></i></a></span>
+                  <span><a href="#"><i class="fa fa-remove"></i></a></span>
+               </div>
+            </div>
+          </div>  
+        </div>
+      
+      
+        <div class="travel-feature-card-details">
+          
+          <h5 class="title">Mountain Lion Sighting</h5>
+          <h6  id="generalLocation3" class="travel-feature-card-date-range"></h6>
+          
+          <div class="row">
+            <div class="small-12 medium-9 columns travel-feature-card-content">
+              <div class="row">
+                <div class="small-4 medium-2 columns">
+                  <img  id="photos2" class="travel-feature-card-image" src=https://static.inaturalist.org/photos/6478391/square.jpg?1488837568" alt="Pic here">
+                </div>
+                <div class="small-8 medium-10 columns">
+                  <h6 class="travel-feature-card-title">Sighting Info</h6>
+                  <ul>
+                    <li id="species_guess3" >Species</li>
+                    <li id="description3">Description</li>
+                    <li id="time_observed_at3">Time</li>
+                    <li id="observed_on_details3">Date</li>
+                    <li id="comments3">Comments</li>
+                  </ul>                </div>
+              </div> 
+            </div>
+      
+            
+          </div> 
+        </div>
+      </div>
+
+      
     </main>
       
       <!--Output container goes here
@@ -131,14 +218,7 @@
       
       <!--Footer goes here-->
 
-      <div class="columns shrink footer text-center">
-        <p>Footer</p>
-        <ul class="menu align-center">
-          <li><a href="">Link</a></li>
-          <li><a href="">Link</a></li>
-          <li><a href="">Link</a></li>
-        </ul>
-      </div>
+      
 
       <!--Footer goes here-->
 
@@ -242,13 +322,33 @@ switch (searchAnimal) {
   //                <li id="observed_on_details">Date</li>
     //              <li id="comments">Comments</li>
 iNatCat();
-//I added these constants
+//I added these constants -Jason
+//First Card
 const photos=document.getElementById("photos");
 const species_guess=document.getElementById("species_guess");
 const description=document.getElementById("description");
 const time_observed_at=document.getElementById("time_observed_at");
 const observed_on_details=document.getElementById("observed_on_details");
 const comments=document.getElementById("comments");
+const generalLocation=document.getElementById("generalLocation");
+
+//Second Card
+const photos2=document.getElementById("photos2");
+const species_guess2=document.getElementById("species_guess2");
+const description2=document.getElementById("description2");
+const time_observed_at2=document.getElementById("time_observed_at2");
+const observed_on_details2=document.getElementById("observed_on_details2");
+const comments2=document.getElementById("comments2");
+const generalLocation2=document.getElementById("generalLocation2");
+
+//Third Card
+const photos3=document.getElementById("photos3");
+const species_guess3=document.getElementById("species_guess3");
+const description3=document.getElementById("description3");
+const time_observed_at3=document.getElementById("time_observed_at3");
+const observed_on_details3=document.getElementById("observed_on_details3");
+const comments3=document.getElementById("comments3");
+const generalLocation3=document.getElementById("generalLocation3");
 
 // -Jason 
 
@@ -264,17 +364,42 @@ if (request.status >= 200 && request.status < 400) {
         var catData = JSON.stringify(data.results[0].place_guess);
         var catData2 = JSON.stringify(data.results[0].quality_grade);
         var catData3 = JSON.stringify(data.results[3].comments[1].body);
-        // I added these lines SUe JSOn_Query
-        var catPhoto = (data.results[0].photos[0].url);
+        // I added these lines SUe JSOn_Query -Jason
+        var photos = (data.results[6].photos[0].url);
       
-        //photos.innerHTML= `<img src="static.inaturalist.org/photos/63041075/square.jpeg?1583700137"/>`
+        //photos.attr= `<img src="static.inaturalist.org/photos/63041075/square.jpeg?1583700137"/>`
+        //photos.innerHTML= data.results[0].photos[0].url;
+
+        //First Card
         species_guess.innerHTML = "Species: " + data.results[3].species_guess;
         description.innerHTML = "Description: " + data.results[25].description;
-        time_observed_at.innerHTML = "Time spotted: " + data.results[1].time_observed_at;
-        observed_on_details.innerHTML = "Date Spotted: " + data.results[1].observed_on;
+        time_observed_at.innerHTML = "Time spotted: " + data.results[3].time_observed_at;
+        observed_on_details.innerHTML = "Date Spotted: " + data.results[3].observed_on;
         comments.innerHTML = "Comments: " + data.results[3].comments[1].body;
+        generalLocation.innerHTML = "Location: " + data.results[3].place_guess;
+        
+        if (data.results[3].time_observed_at = "null") {
+          time_observed_at.innerHTML = " Time spotted: No info"
+        }
+        //Second Card
+        species_guess2.innerHTML = "Species: " + data.results[6].species_guess;
+        description2.innerHTML = "Description: " + data.results[6].description;
+        time_observed_at2.innerHTML = "Time spotted: " + data.results[6].time_observed_at;
+        observed_on_details2.innerHTML = "Date Spotted: " + data.results[6].observed_on;
+        comments2.innerHTML = "Comments: " + data.results[6].comments[1].body;
+        generalLocation2.innerHTML = "Location: " + data.results[6].place_guess;
+
+        //Third Card
+        species_guess3.innerHTML = "Species: " + data.results[15].species_guess;
+        description3.innerHTML = "Description: " + data.results[15].description;
+        time_observed_at3.innerHTML = "Time spotted: " + data.results[15].time_observed_at;
+        observed_on_details3.innerHTML = "Date Spotted: " + data.results[15].observed_on;
+        comments3.innerHTML = "Comments: " + data.results[15].comments[0].body;
+        generalLocation3.innerHTML = "Location: " + data.results[15].place_guess;
+
         //- Jason 
-        console.log(catPhoto);
+
+        console.log(photos);
         console.log(catData);
         console.log(catData2);
         console.log(catData3);
