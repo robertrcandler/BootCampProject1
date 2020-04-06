@@ -1,0 +1,540 @@
+</html><!doctype html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Texas Big Cat Finder</title>
+  <link rel="stylesheet" href="assets/app.css">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@1,700&display=swap" rel="stylesheet">
+  <script src="https://use.fontawesome.com/cc1be07493.js"></script>
+</head>
+<body>
+    <style>
+        .travel-feature-card-header-controls a {
+  color: #fefefe;
+  }
+  .travel-feature-card-header-controls i {
+  height: 20px;
+  width: 20px;
+  margin-left: 10px;
+  }
+  .travel-feature-card-image {
+  margin-top: 5px;
+  }
+  .travel-feature-card-details {
+  background: #f0f0f0;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 20px;
+  color: #8a8a8a;
+  }
+  .travel-feature-card-details button.added-button {
+  color: #505050;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  font-size: 0.8em;
+  }
+  .travel-feature-card-details button.added-button img {
+  margin-right: 5px;
+  }
+  .travel-feature-card-details button.added-button:hover {
+  color: #505050;
+  border: 1px solid #747474;
+  }
+  .travel-feature-card-details button.add-button {
+  color: #fff;
+  font-weight: bold;
+  height: 100%;
+  background-image: url("./assets/mountain-lion-with-a-wooded-background.jpg");
+  background-repeat: no-repeat;
+  /* background-size: 81.2em; */
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 5em;
+  overflow-x: hidden;
+}
+.input-group-rounded .input-group-field {
+  border-radius: 5000px 0 0 5000px;
+  padding-left: 1rem;
+}
+.input-group-rounded .input-group-button .button {
+  border-radius: 0 5000px 5000px 0;
+  font-size: 0.8rem;
+}
+/*css for header*/
+.dropdown-content {
+  font-family: 'PT Serif', serif;
+}
+.top-bar {
+  background-color: darkslategray;
+  margin: 0px auto;
+  overflow: hidden;
+  opacity: 75%;
+  border-bottom: 10px ridge;
+}
+.topbar-responsive-logo {
+  overflow: hidden;
+  font-size: 25px;
+  color: darkorange;
+  padding: 5px 10px;
+  font-family: 'PT Serif', serif;
+}
+.top-bar-title {
+  overflow: hidden;
+  background-color: #2f4f4f;
+  /* margin-left: 10px; */
+}
+.menu-icon {
+  overflow: hidden;
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
+/* .searchBox {
+  overflow: hidden;
+  margin-top: 150px;
+  margin-left: 50px;
+  margin-right: 50px;
+  opacity: 65%;
+} */
+/* Jasons css for search bar  */
+.hero-search-filter {
+  background: url("https://images.pexels.com/photos/115095/pexels-photo-115095.jpeg?w=940&h=650&auto=compress&cs=tinysrgb") center center no-repeat;
+  height: 300px;
+  background-size: cover;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.hero-search-filter-logo {
+  margin-bottom: 2rem;
+}
+.hero-search-filter-content {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 300px;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.hero-search-filter-menu {
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+@media screen and (max-width: 39.9375em) {
+  .hero-search-filter-menu li {
+    -webkit-flex-basis: 50%;
+        -ms-flex-preferred-size: 50%;
+            flex-basis: 50%;
+  }
+  .hero-search-filter-menu li a {
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+.hero-search-filter-menu a {
+  color: #fefefe;
+  font-weight: bold;
+}
+.hero-search-filter-menu a .fa {
+  font-size: 1.125rem;
+  font-weight: normal;
+  text-decoration: none;
+}
+.hero-search-filter-menu a:hover {
+  text-decoration: underline;
+  font-family: 'PT Serif', serif;
+  color: darkorange;
+}
+.hero-search-filter-form {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 90%;
+  background: #fefefe;
+  padding: 0.25rem;
+  border-radius: 5px;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.hero-search-filter-form .divider {
+  background-color: #cacaca;
+  width: 1px;
+}
+.hero-search-filter-form label {
+  margin-right: 0.75rem;
+  margin-left: 0.75rem;
+  color: #8a8a8a;
+  font-weight: bold;
+}
+.hero-search-filter-form input,
+.hero-search-filter-form .button {
+  margin-bottom: 0;
+}
+@media screen and (max-width: 39.9375em) {
+  .hero-search-filter-form {
+    width: 95%;
+  }
+}
+.hero-search-filter-form-find,
+.hero-search-filter-form-near {
+  border: 0;
+  box-shadow: none;
+}
+.hero-search-filter-form-find:focus,
+.hero-search-filter-form-near:focus {
+  border: 0;
+  box-shadow: none;
+}
+/* css for footer */
+.footer-container {
+  position: relative;
+  float: left;
+  background-color: darkslategray;
+  overflow: hidden;
+  padding-top: 2%;
+  padding-left: 37.1%;
+  padding-right: 37%;
+  margin-top: 45%;
+  opacity: 75%;
+  overflow-x: hidden;
+}
+.travel-feature-card-header {
+  margin-top: 30px;
+  background-color: #56524b;
+  padding: 10px 15px 5px 45px;
+  position: relative;
+  margin-top: 15px;
+  }
+  .travel-feature-card-header.icon:after {
+  font: normal normal normal 14px/1 FontAwesome;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  color: #fefefe;
+  }
+  .travel-feature-card-header.hotel-icon:after {
+  content: "\f236";
+  }
+  .travel-feature-card-header.car-icon:after {
+  content: "\f1b9";
+  }
+  .travel-feature-card-header .travel-feature-card-subtitle {
+  float: left 700;
+  letter-spacing: 0.5px;
+  font-size: 0.8em;
+  }
+  @media screen and (max-width: 39.9375em) {
+  .travel-feature-card-content {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #cacaca;
+  }
+  }
+  .travel-feature-card-price {
+  text-align: right;
+  }
+  @media screen and (max-width: 39.9375em) {
+  .travel-feature-card-price {
+  padding-top: 15px;
+  }
+  .travel-feature-card-price .price-subtext {
+  margin-bottom: 0px;
+  }
+  }
+  .travel-feature-card-price h6 {
+  font-weight: 600;
+  font-size: 1.3em;
+  color: #0a0a0a;
+  padding: 0;
+  margin: 0;
+  }
+  .travel-feature-card-title {
+  font-weight: 500;
+  font-size: 1.25em;
+  color: #0a0a0a;
+  }
+  .travel-feature-card-date-range {
+  font-size: 0.9em;
+  font-weight: 700;
+  color: #0a0a0a;
+  }
+  .travel-feature-card-header-controls {
+  float: right;
+  }
+  .travel-feature-card-header-controls i {
+  height: 20px;
+  width: 20px;
+  margin-left: 10px;
+  }
+  main {
+  margin: 10px;
+  border-radius: 4px;
+  border-width: 2px;
+  border-color: black;
+  }
+        </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+  <!--Change this to mobile responsive navbar-->
+  <nav class="top-bar topbar-responsive">
+    <div class="top-bar-title">
+      <span data-responsive-toggle="topbar-responsive" data-hide-for="medium">
+        <button class="menu-icon" type="button" data-toggle></button>
+      </span>
+      <a class="topbar-responsive-logo" href="#"><strong>Texas Big Cats Finder</strong></a>
+    </div>
+    <div id="topbar-responsive" class="topbar-responsive-links">
+      <div class="top-bar-right">
+        <div class="dropdown">
+          <button class="dropbtn"></button>
+          <div class="dropdown-content">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+          </div>
+        </div>
+        <!-- <ul class="menu simple vertical medium-horizontal">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li> -->
+        <!-- <button type="button" class="button hollow topbar-responsive-button">Categories</button> -->
+        </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!--Search box goes here-->
+  <!-- <main class="searchBox">
+    <div class="input-group input-group-rounded">
+      <input class="input-group-field" type="search">
+      <div class="input-group-button">
+        <input type="submit" class="button secondary" value="Search">
+      </div>
+  </main> -->
+  <header class="hero-search-filter">
+    <div class="hero-search-filter-content">
+      <img class="hero-search-filter-logo" src="https://placehold.it/160x80" alt="" />
+      <form class="hero-search-filter-form" action="">
+        <label for="findtext">Search</label>
+        <input id="findtext" class="hero-search-filter-form-find" type="text" />
+        <div class="divider">&nbsp;</div>
+        <label for="findlocate">Area</label>
+        <input id="findlocate" class="hero-search-filter-form-near" type="text" />
+        <button class="button"><i class="fa fa-search"></i></button>
+      </form>
+      <ul class="hero-search-filter-menu menu align-center">
+        <li id="sitings"><a href="#"></i> Sitings</a></li>
+        <li><a href="#"></i> Tips</a></li>
+        <li><a href="#"></i> Services</a></li>
+        <li><a href="#"></i> FAQ</a></li>
+      </ul>
+    </div>
+  </header>
+  <main>
+    <div class="travel-feature-card">
+      <div class="travel-feature-card-header{{#if type}} icon {{type}}-icon{{/if}}">
+        <div class="row">
+           <div class="medium-12 columns">
+             <h5 class="travel-feature-card-subtitle"></h5>
+              <div class="travel-feature-card-header-controls">
+                <span><a href="#"><i class="fa fa-edit"></i></a></span>
+                <span><a href="#"><i class="fa fa-remove"></i></a></span>
+             </div>
+          </div>
+        </div>  
+      </div>
+      <div class="travel-feature-card-details">
+        <h5 class="title">Cat Sighting</h5>
+        <h6 class="travel-feature-card-date-range">Date/TIme</h6>
+        <div class="row">
+          <div class="small-12 medium-9 columns travel-feature-card-content">
+            <div class="row">
+              <div class="small-4 medium-2 columns">
+                <img class="travel-feature-card-image" src="" alt="Pic here">
+              </div>
+              <div class="small-8 medium-10 columns">
+                <h6 class="travel-feature-card-title">Recent Sighting</h6>
+                <ul>
+                  <li class="species_guess" >Species</li>
+                  <li class="description">Description</li>
+                  <li class="time_observed_at">Time</li>
+                  <li class="observed_on_details">Date</li>
+                  <li class="">Comments</li>
+                </ul>                </div>
+            </div> 
+          </div>
+          <div class="small-12 medium-3 columns travel-feature-card-price">
+            <h6>$2,000.00/mo</h6>
+            <p class="travel-feature-card-price-subtext">Big cat finder subscription</p>
+          </div>
+        </div> 
+      </div>
+    </div>
+  </main>
+  <!--Footer goes here-->
+  <section class="footer-container">
+    <div class="columns shrink footer text-center">
+      <p>Powered by Google Maps© & iNaturalist©</p>
+      <ul class="menu align-center">
+        <!-- <li><a href="">Link</a></li>
+        <li><a href="">Link</a></li>
+        <li><a href="">Link</a></li> -->
+      </ul>
+    </div>
+  </section>
+  <!--Footer goes here-->
+  <!--Robert's Vanilla JS-->
+  <script>
+    var map;
+    function initMap() {
+      map = new google.maps.Map(document.getElementById('map'), {
+        center: { lat: 31.9686, lng: -99.9018 },
+        zoom: 6
+      }); console.log('success')
+    }
+  </script>
+  <script>
+    function iNatAPI() {
+      //put way to call submit button location or what ever
+      //make function to create lattitude/longitude box out of location name
+      //link species name from html to species id here
+      //required variables
+      var request;
+      var examplequeryURL = 'https://api.inaturalist.org/v1/observations?taxon_name=bear&captive=false&verifiable=true&lat=29.4704&lng=-103.9578&radius=5&order=desc&order_by=created_at';
+      var siteurl = 'https://api.inaturalist.org/v1/observations?';
+      var mappable = 'mappable=true'; //can put on map, keep true
+      var order = '&order=desc&order_by=created_at'; //order that results are listed
+      var queryURL = siteurl + mappable + order;
+      //range calculator
+      function iNatRange() {
+        //one place, don't know what radius of zone is? but fairly decent sized
+        var lat = '&lat=29.211183'; //lattitude
+        var lng = '&lng=-103.236002'; //longitude
+        //sample box
+        var boxarea = '&nelat=29.3&nelng=-103.2&place_id=any&swlat=29.24&swlng=-103.4';
+        //all of texas
+        var texas = '&place_id=18';
+        //location search
+        var coord = "";//using box area as example, create box creater using google api
+        switch (coord) {
+          case boxarea:
+            queryURL = queryURL + boxarea;
+            break;
+          case "":
+            queryURL = queryURL + texas;
+            break;
+        }
+      }
+      iNatRange();
+      //cat search adder
+      function iNatCat() {
+        //there are no recorded panther/jaguar sightings in texas
+        var mammal = '&iconic_taxon_name=mammalia'; //this works, searches all mammals
+        var mountainLion = '&taxon_id=42006'; //includes, puma, couger, mountain lion
+        //there are no recorded panther/jaguar sightings in texas
+        var ocelot = '&taxon_id=41997';//includes margay
+        var Jaguarundi = '&taxon_id=197783';
+        var bobcat = '&taxon_id=41976';
+        var kitty = '&taxon_id=118552';//domestic cat
+        var bear = '&taxon_id=41638';//american black bear
+        var coyote = '&taxon_id=42051';
+        //search or button functionality
+        var searchAnimal = "Mountain Lion";//using ocelot as example/link to doc later
+        switch (searchAnimal) {
+          case ""://all cats
+            queryURL = queryURL + mountainLion + ocelot + Jaguarundi + bobcat + kitty;
+            break;
+          case "Ocelot":
+          case "Margay":
+            queryURL = queryURL + ocelot;
+            break;
+          case "Mountain Lion":
+          case "Puma":
+          case "Couger":
+            queryURL = queryURL + mountainLion;
+            break;
+          case "Jaguarundi":
+            queryURL = queryURL + Jaguarundi;
+            break;
+          case "Bobcat":
+            queryURL = queryURL + bobcat;
+            break;
+          case "Cat":
+            queryURL = queryURL + kitty;
+            break;
+          default:
+            alert("Something went wrong!");
+        }
+      }
+      iNatCat();
+      console.log(queryURL);
+      request = new XMLHttpRequest();
+      request.open('GET', queryURL, true);
+      request.onload = function () {
+        var $map = $('#map')
+        var data = JSON.parse(this.response);
+        if (request.status >= 200 && request.status < 400) {
+          console.log(data);
+          $.each(data, function (i, item) {
+            var catData = JSON.stringify(data.photo);
+            // 2 arguments passed above are i which is index, and the actual item
+            $map.append('<div>city ' + data.photo + ' </div>');
+          });
+        }
+        else {
+          console.log("something went wrong");
+        }
+      }
+      request.send();
+    }
+    iNatAPI();
+    //End Robert's JS
+    //Here I am working on pulling an object (photo) from the API arrays - Jason
+    function getInfo() {
+      fetch(apiURL)
+        .then(resp => resp.jas)
+    }
+  </script>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmqDHas64RFD_96u5h8kJ1OFWEFdweH80&callback=initMap"></script>
+  <!-- //End Robert's JS
+  //Here I am working on pulling an object (photo) from the API arrays - Jason
+  function getInfo() {
+  fetch(apiURL)
+  .then(resp => resp.jas)
+  } -->
+  </script>
+  <script src="assets/app.js"></script>
+  <!-- DOUBLE CHECK THE CDNs BELOW IF YOU RUN INTO ISSUES, THESE WERE TAILORED FOR A SPECIFIC HW ASSIGNMENT OF MINE - GEORGE -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+</html>

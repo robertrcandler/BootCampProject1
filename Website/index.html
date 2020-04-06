@@ -6,11 +6,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="style.css">
     <title>Texas #1 Big Cat Finder</title>
     
 </head>
-    <body style="background-image: url(https://images5.alphacoders.com/428/thumb-1920-428267.jpg);">
+    <body>
      <style>
       
       #map {
@@ -52,14 +52,59 @@
             </div>
           </nav>
 
-          <div id="searchHistory">
+          <main>
+            <div class="travel-feature-card">
+              <div class="travel-feature-card-header{{#if type}} icon {{type}}-icon{{/if}}">
+                <div class="row">
+                   <div class="medium-12 columns">
+                     <h5 class="travel-feature-card-subtitle"></h5>
+                      <div class="travel-feature-card-header-controls">
+                        <span><a href="#"><i class="fa fa-edit"></i></a></span>
+                        <span><a href="#"><i class="fa fa-remove"></i></a></span>
+                     </div>
+                  </div>
+                </div>  
+              </div>
+            
+            
+              <div class="travel-feature-card-details">
+                
+                <h5 class="title">Cat Sighting</h5>
+                <h6 class="travel-feature-card-date-range">Date/TIme</h6>
+                
+                <div class="row">
+                  <div class="small-12 medium-9 columns travel-feature-card-content">
+                    <div class="row">
+                      <div class="small-4 medium-2 columns">
+                        <img class="travel-feature-card-image" src="" alt="Pic here">
+                      </div>
+                      <div class="small-8 medium-10 columns">
+                        <h6 class="travel-feature-card-title">Recent Sighting</h6>
+                        <ul>
+                          <li class="species_guess" >Species</li>
+                          <li class="description">Description</li>
+                          <li class="time_observed_at">Time</li>
+                          <li class="observed_on_details">Date</li>
+                          <li class="">Comments</li>
+                        </ul>                </div>
+                    </div> 
+                  </div>
+            
+                  <div class="small-12 medium-3 columns travel-feature-card-price">
+                    <h6>$2,000.00/mo</h6>
+                    <p class="travel-feature-card-price-subtext">Big cat finder subscription</p>
+                  </div>
+                </div> 
+              </div>
+            </div>
+          </main>
 
           </div>
     
           <!--Search box goes here-->
           <main class="searchBox">
             <div class="input-group input-group-rounded">
-                <input class="input-group-field" type="search">
+                <input id="form1" class="input-group-field" type="search">
                 <div class="input-group-button">
                   <input id="daSearchbutton" type="submit" class="button secondary" value="Search">
                 </div>
@@ -188,7 +233,7 @@
                   var catData = (data.results[1].photos[0].url);
                   console.log(catData);
                   // 2 arguments passed above are i which is index, and the actual item
-                $map.append(catData);
+                $map.prepend(catData);
                 console.log('y')
               });
           if (request.status >= 200 && request.status < 400) {
@@ -213,6 +258,16 @@
     .then(resp => resp.jas)
   }
     
+
+  function store1() {
+    document.getElementById('daSearchbutton').onclick = function() {
+        var input = document.getElementById('form1').value;
+        console.log(input);
+        localStorage.getItem(input);
+localStorage.setItem("userinput", input);
+    };
+}
+store1()
   </script>
           <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmqDHas64RFD_96u5h8kJ1OFWEFdweH80&callback=initMap"
 ></script> -->

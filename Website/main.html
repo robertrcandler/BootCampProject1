@@ -1,8 +1,6 @@
 <!doctype html>
 <html class="no-js" lang="en">
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -10,69 +8,11 @@
   <title>Texas Big Cat Finder</title>
   <link rel="stylesheet" href="assets/app.css">
   <link rel="stylesheet" href="style.css">
+  <script src="https://use.fontawesome.com/cc1be07493.js"></script>
 
 </head>
-=======
-=======
->>>>>>> 839fbd3840adf69d444b67874f74489ae69d6c11
-  </head>
-<body style="background-image: url(https://images5.alphacoders.com/428/thumb-1920-428267.jpg);">
 
-    <!--Change this to mobile responsive navbar-->
-    <nav class="top-bar topbar-responsive">
-        <div class="top-bar-title">
-          <span data-responsive-toggle="topbar-responsive" data-hide-for="medium">
-            <button class="menu-icon" type="button" data-toggle></button>
-          </span>
-          <a class="topbar-responsive-logo" href="#"><strong>Texas Big Cats Finder</strong></a>
-        </div>
-        <div id="topbar-responsive" class="topbar-responsive-links">
-          <div class="top-bar-right">
-            <ul class="menu simple vertical medium-horizontal">
-              <li><a href="#">Home</a></li>
-              <li><a href="History.html">History</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Works</a></li>
-              <li><a href="#">News</a></li>
-              <li><a href="#">Contact</a></li>
-              <li>
-                <button type="button" class="button hollow topbar-responsive-button">Categories</button>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-
-      <!--Search box goes here-->
-      <main class="searchBox">
-        <div class="input-group input-group-rounded">
-            <input class="input-group-field" type="search">
-            <div class="input-group-button">
-                <a href="Output.html">
-                    <!--How to get this button to work properly?-->
-              <input type="submit" class="button secondary" value="Search">
-            </div>
-          </div>
-          
-        </main>
-      <!--Search box goes here-->
-<<<<<<< HEAD
->>>>>>> c7240e708d7812654d6e5e06768aa064584855e0
-=======
-=======
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Texas Big Cat Finder</title>
-  <link rel="stylesheet" href="assets/app.css">
-  <link rel="stylesheet" href="style.css">
-
-</head>
->>>>>>> jg_branch
->>>>>>> 839fbd3840adf69d444b67874f74489ae69d6c11
-
-<body>
+<body >
 
   <!--Change this to mobile responsive navbar-->
   <nav class="top-bar topbar-responsive">
@@ -86,28 +26,45 @@
       <div class="top-bar-right">
         <ul class="menu simple vertical medium-horizontal">
           <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="History.html">History</a></li>
+          <li><a href="Output.html">Sightings</a></li>
           <li>
-            <!-- <button type="button" class="button hollow topbar-responsive-button">Categories</button> -->
+            <button type="button" class="button hollow topbar-responsive-button">Categories</button>
           </li>
         </ul>
       </div>
     </div>
   </nav>
 
+  <!--Search box goes here-->
+  <header class="hero-search-filter">
+  <div class="hero-search-filter-content">
+    <form class="hero-search-filter-form" action="">
+      <label for="findtext">Find</label>
+      <input id="findtext" class="hero-search-filter-form-find" type="text" />
+      <div class="divider">&nbsp;</div>
+      <label for="findlocate">Near</label>
+      <input id="findlocate" class="hero-search-filter-form-near" type="text" />
+      <button class="button"><i class="fa fa-search"></i></button>
+    </form>
+    <ul class="hero-search-filter-menu menu align-center">
+      <li><a href="#"><i class="fa fa-cutlery" aria-hidden="true"></i> Big Cats</a></li>
+      <li><a href="#"><i class="fa fa-glass" aria-hidden="true"></i> Wildlife Reserves</a></li>
+      <li><a href="#"><i class="fa fa-wrench" aria-hidden="true"></i> More info</a></li>
+    </ul>
+  </div>
+</header>
 
-   <!--Search box goes here-->
-   <main class="searchBox">
-    <div class="input-group input-group-rounded">
-      <input class="input-group-field" type="search">
-      <div class="input-group-button">
-        <input type="submit" class="button secondary" value="Search">
-    </div>
-  </main>
+<div>
+  <button id="takeInfo" onclick={fetchInfo}>Get Info</button>
+  <br>
+</div>
+  <!--Search box goes here-->
+
+
 
   <!--Footer goes here-->
-  <section class="footer-container"> 
+  <section class="footer-container">
     <div class="columns shrink footer text-center">
       <p>Powered by Google Maps© & iNaturalist©</p>
       <ul class="menu align-center">
@@ -117,12 +74,158 @@
       </ul>
     </div>
   </section>
-<!--Footer goes here-->
+  <!--Footer goes here-->
 
 
 
   <!--app.css , app.js , app.js.map are the Foundation files (Jason)-->
-  <script src="assets/app.js"></script>
+  <!--<script src="assets/app.js"></script>
+  <script src="logic.js"></script>-->
+  
+  <!--Robert's Vanilla JS-->
+  
+  <script>
+    var map;
+          function initMap() {
+            map = new google.maps.Map(document.getElementById('map'), {
+              center: {lat: 31.9686, lng: -99.9018},
+              zoom: 6
+              
+            });console.log('success')
+          }
+    </script>
+<script>
+
+function iNatAPI() {
+//put way to call submit button location or what ever
+//make function to create lattitude/longitude box out of location name
+//link species name from html to species id here
+//required variables
+var request;
+var examplequeryURL = 'https://api.inaturalist.org/v1/observations?taxon_name=bear&captive=false&verifiable=true&lat=29.4704&lng=-103.9578&radius=5&order=desc&order_by=created_at';
+var siteurl = 'https://api.inaturalist.org/v1/observations?';
+var mappable = 'mappable=true'; //can put on map, keep true
+var order = '&order=desc&order_by=created_at'; //order that results are listed
+var queryURL = siteurl + mappable + order;
+//range calculator
+function iNatRange() {
+  //one place, don't know what radius of zone is? but fairly decent sized
+  var lat = '&lat=29.211183'; //lattitude
+  var lng = '&lng=-103.236002'; //longitude
+  //sample box
+  var boxarea = '&nelat=29.3&nelng=-103.2&place_id=any&swlat=29.24&swlng=-103.4';
+  //all of texas
+  var texas = '&place_id=18';
+  //location search
+  var coord = "";//using box area as example, create box creater using google api
+  switch (coord) {
+      case boxarea:
+          queryURL=queryURL+boxarea;
+          break;
+      case "":
+          queryURL=queryURL+texas;
+          break;
+  }
+}
+iNatRange();
+//cat search adder
+function iNatCat() {
+  //there are no recorded panther/jaguar sightings in texas
+  var mammal = '&iconic_taxon_name=mammalia'; //this works, searches all mammals
+  var mountainLion = '&taxon_id=42006'; //includes, puma, couger, mountain lion
+  //there are no recorded panther/jaguar sightings in texas
+  var ocelot = '&taxon_id=41997';//includes margay
+  var Jaguarundi = '&taxon_id=197783';
+  var bobcat = '&taxon_id=41976';
+  var kitty = '&taxon_id=118552';//domestic cat
+  var bear = '&taxon_id=41638';//american black bear
+  var coyote = '&taxon_id=42051';
+  //search or button functionality
+  var searchAnimal = "Mountain Lion";//using ocelot as example/link to doc later
+  switch (searchAnimal) {
+      case ""://all cats
+          queryURL = queryURL + mountainLion + ocelot + Jaguarundi + bobcat + kitty;
+          break;
+      case "Ocelot":
+      case "Margay":
+          queryURL = queryURL + ocelot;
+          break;
+      case "Mountain Lion":
+      case "Puma":
+      case "Couger":
+          queryURL = queryURL + mountainLion;
+          break;
+      case "Jaguarundi":
+          queryURL = queryURL + Jaguarundi;
+          break;
+      case "Bobcat":
+          queryURL = queryURL +bobcat;
+          break;
+      case "Cat":
+          queryURL = queryURL + kitty;
+          break;
+      default:
+          alert("Something went wrong!");
+  }
+}
+// <li id="species_guess" >Species</li>
+//<li id="description">Description</li>
+  //                  <li id="time_observed_at">Time</li>
+    //                <li id="observed_on_details">Date</li>
+      //              <li id="comments">Comments</li>
+iNatCat();
+const species_guess=document.getElementById("species_guess");
+console.log(queryURL);
+request = new XMLHttpRequest();
+request.open('GET', queryURL, true);
+request.onload = function () {
+  var $map = $('#map')
+  var data = JSON.parse(this.response);
+  if (request.status >= 200 && request.status < 400) {
+      console.log(data);
+      $.each(data, function(i, item) {
+          var catData = JSON.stringify(data.results[0].place_guess);
+          var catData2 = JSON.stringify(data.results[0].quality_grade);
+          var catData3 = JSON.stringify(data.results[3].comments[1].body);
+          species_guess.innerHTML = data.results[0].place_guess;
+          console.log(catData);
+          console.log(catData2);
+          console.log(catData3);
+
+          // 2 arguments passed above are i which is index, and the actual item
+        $map.append('<div>city ' + data.photo + ' </div>');
+        console.log("y");
+      });
+  }
+   else {
+      console.log("something went wrong");
+  }
+}
+request.send();
+}
+iNatAPI();
+//End Robert's JS
+//Here I am working on pulling an object (photo) from the API arrays - Jason
+function getInfo() {
+fetch(apiURL)
+.then(resp => resp.jas)
+}
+</script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmqDHas64RFD_96u5h8kJ1OFWEFdweH80&callback=initMap"
+></script>
+
+<!--Jorge's local storage function-->
+<script>
+function store1() {
+  document.getElementById('daSearchbutton').onclick = function() {
+  var input = document.getElementById('form1').value;
+  console.log(input);
+  localStorage.getItem(input);
+  localStorage.setItem("userinput", input);
+  };
+  }
+  store1()</script>
+
 
   <!-- DOUBLE CHECK THE CDNs BELOW IF YOU RUN INTO ISSUES, THESE WERE TAILORED FOR A SPECIFIC HW ASSIGNMENT OF MINE - GEORGE -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
