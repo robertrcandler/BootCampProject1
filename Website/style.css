@@ -107,7 +107,7 @@ body {
 
 @media screen and (max-width: 39.9375em) {
   .hero-search-filter-menu li {
-    color: darkorange;
+
     -webkit-flex-basis: 50%;
         -ms-flex-preferred-size: 50%;
             flex-basis: 50%;
@@ -133,7 +133,7 @@ body {
 .hero-search-filter-menu a:hover {
   text-decoration: underline;
   font-family: 'PT Serif', serif;
-  color: darkorange;
+  /* color: darkorange; */
 }
 
 .hero-search-filter-form {
@@ -321,4 +321,24 @@ body {
   border-radius: 4px;
   border-width: 2px;
   border-color: black;
+  }
+
+  #photos, #photos2 {
+    width: 350px;
+    height: 300px;
+  }
+
+  .travel-feature-card-details, .title, 
+  .travel-feature-card-title {
+    font-family: 'PT Serif', serif;
+    color: darkslategray;
+    /* margin-left: 25px; */
+  }
+
+  #map2, #map3, #map1 {
+    /* margin-left: 30px; */
+    float: right;
+    height: 350px;
+    width: 500px;
+    margin-right: 1%;
   }
